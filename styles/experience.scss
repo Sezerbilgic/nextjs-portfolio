@@ -1,0 +1,27 @@
+.experience {
+  display: flex;
+  flex-direction: column;
+  padding: 144px 440px 126px 440px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .title {
+      color: #c5c5c5;
+      font-size: 32px;
+      font-weight: 500;
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      background-color: #AFC3AB;;
+    }
+  }
+
+  .experience-tab {
+    width: 320px;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "Paramtech": [
+    {
+      "title": "Frontend Specialist",
+      "date": {
+        "startDate": "Sep 2022",
+        "endDate": "Present"
+      }
+    }
+  ],
+  "Finrota": [
+    {
+      "title": "Intern",
+      "date": {
+        "startDate": "Sep 2022",
+        "endDate": "Present"
+      }
+    },
+    {
+      "title": "Jr. Frontend Specialist",
+      "date": {
+        "startDate": "Sep 2022",
+        "endDate": "Present"
+      }
+    }
+  ]
+}
