@@ -1,0 +1,20 @@
+.polygon {
+  clip-path: polygon( 1.788% 25.644%,50% 1.289%,98.212% 25.644%,98.212% 74.356%,50% 98.712%,1.788% 74.356%,1.788% 25.644% );
+  width: 114px;
+  height: 114px;
+  background: #BB8A52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // polygon(2% 29%, 49% 1%, 96% 29%, 96% 83%, 49% 111%, 2% 83%, 2% 29%)
+  // polygon(49% 0, 100% 34%, 100% 74%, 51% 100%, 0 73%, 0 34%)
+
+  .polygon-inner {
+    clip-path: polygon( 1.788% 25.644%,50% 1.289%,98.212% 25.644%,98.212% 74.356%,50% 98.712%,1.788% 74.356%,1.788% 25.644% );
+    width: 106px;
+    height: 106px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

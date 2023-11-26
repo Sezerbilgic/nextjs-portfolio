@@ -1,0 +1,23 @@
+<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="8" height="8" fill="#1E1E1E"/>
+<g id="Desktop - 1" clip-path="url(#clip0_0_1)">
+<rect width="1440" height="2124" transform="translate(-1079 -56)" fill="white"/>
+<rect id="Rectangle 1" x="-1079" y="-56" width="1440" height="2124" fill="#0A192F"/>
+<g id="Frame 4">
+<g id="Group 2">
+<g id="Header">
+<g id="Frame 3">
+<g id="About">
+<path id="Polygon 2" d="M1.2859 2.43301L4 0.866025L6.7141 2.43301V5.56699L4 7.13397L1.2859 5.56699V2.43301Z" stroke="#BB8A52" stroke-width="1.5"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="1440" height="2124" fill="white" transform="translate(-1079 -56)"/>
+</clipPath>
+</defs>
+</svg>
