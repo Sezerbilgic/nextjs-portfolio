@@ -1,0 +1,16 @@
+{
+  "Paramtech": {
+      "id": "Paramtech",
+      "title": "Paramtech",
+      "bgColor": "#4D068C",
+      "picture": "param",
+      "size": 45
+  },
+  "Finrota": {
+    "id": "Paramtech",
+    "title": "Paramtech",
+    "bgColor": "#EE6F3B",
+    "picture": "finrota",
+    "size": 45
+  }
+}

@@ -6,7 +6,7 @@ type PolygonCardProps = {
   title: string;
   bgColor: string;
   picture: string;
-  progress: number;
+  progress?: number;
   size?: number;
 }
 

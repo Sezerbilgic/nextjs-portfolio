@@ -1,5 +1,6 @@
-'use client'
+import Image from 'next/image';
 import React from 'react'
+import Polygon from "../assets/svg/Polygon.svg";
 
 type TabDataProps = {
   title: string,
@@ -13,44 +14,57 @@ type TabDataProps = {
 }
 
 type TabData = {
-  [key: string]: Array<TabData>
+  [key: string]: Array<TabDataProps>
 }
 
 type TabProps = {
   data: TabData,
-  activeKey?: string
+  activeKey: string
+  setActiveKey: (e: any) => void
 }
 
 const Tab = (props: TabProps) => {
   const experienceKeys = Object.keys(props.data)
-  const [activeTab, setActiveTab] = React.useState<string>(props.activeKey || experienceKeys[0])
-  const [activeData, setActiveData] = React.useState<Array<TabDataProps>>(props.data[activeTab])
-  console.log(activeTab, activeData)
+
   return (
     <div className='tab' >
       <div className='tab-header' >
         {
           experienceKeys.map((exp, index: number) => (
-            <span onClick={() => setActiveTab(exp)} key={index} className={`tab-header-title ${exp === activeTab ? "active" : ""}`} >{exp}</span>
+            <span onClick={() => props.setActiveKey(exp)} key={index} className={`tab-header-title ${exp === props.activeKey ? "active" : ""}`} >{exp}</span>
           ))
         }
       </div>
-      <div className='tab-body' >
-        {
-          activeData?.map((data, index) => (
-            <div key={index} >
-              <span>{data.title}</span>
-              <span>{data.date.startDate}</span> - <span>{data.date.endDate}</span>
+      {
+        Object.entries(props.data).map(([key, activeData], index) => (
+          <div key={index} className={`tab-body fadeIn ${key === props.activeKey ? "active" : ""}`} >
+            {
+              activeData?.map((data, index) => (
+                <>
+                  <div className='tab-body-list' key={index} >
+                    <span className='tab-body-title' >{data.title}</span>
+                    <span className='tab-body-date' >{data.date.startDate} - {data.date.endDate}</span>
 
-              {
-                data.experiences?.map((exp, index) => (
-                  <p key={index} >{exp.description}</p>
-                ))
-              }
-            </div>
-          ))
-        }
-      </div>
+                    {
+                      data.experiences?.map((exp, index) => (
+                        <p className='tab-body-description' key={index} ><Image className='icon' src={Polygon} alt="Polygon" />{exp.description}</p>
+                      ))
+                    }
+                  </div>
+                  {
+                    index !== activeData.length - 1 &&
+                    <div className='divider-container' >
+                      <div className='divider' ></div>
+                      <Image className='icon' src={Polygon} alt="Polygon" />
+                      <div className='divider' ></div>
+                    </div>
+                  }
+                </>
+              ))
+            }
+          </div>
+        ))
+      }
     </div>
   )
 }
